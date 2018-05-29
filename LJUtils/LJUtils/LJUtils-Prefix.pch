@@ -1,0 +1,14 @@
+//
+//  LJUtils-Prefix.pch
+//  LJUtils
+//
+//  Created by liujian on 2018/5/29.
+//  Copyright © 2018年 liujian. All rights reserved.
+//
+
+#ifndef LJUtils_Prefix_pch
+#define LJUtils_Prefix_pch
+
+#import "Contant.h"
+
+#endif /* LJUtils_Prefix_pch */
