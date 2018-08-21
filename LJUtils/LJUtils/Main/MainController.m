@@ -8,9 +8,11 @@
 
 #import "MainController.h"
 #import "MainTableViewCell.h"
+#import "PlainTableController.h"
+#import "GroupTableController.h"
 
 @interface MainController ()<UITableViewDelegate, UITableViewDataSource>
-@property(nonatomic, strong) UITableView * table;
+@property(nonatomic, strong) UITableView * tableView;
 @property(nonatomic, strong) NSArray * listArr;
 @end
 
@@ -21,8 +23,7 @@ static NSString * const kMainCellIdentifier = @"MainCellIdentifier";
 #pragma mark - Circle Life
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [self.view addSubview:self.table];
+    [self.view addSubview:self.tableView];
 }
 
 #pragma mark - UITableViewDelegate and UITableViewDataSource
@@ -43,18 +44,19 @@ static NSString * const kMainCellIdentifier = @"MainCellIdentifier";
 }
 
 #pragma mark - Setter and Getter
--(UITableView *)table{
-    if (_table == nil) {
+-(UITableView *)tableView{
+    if (_tableView == nil) {
         CGFloat barHeight = self.navigationController.navigationBar.frame.size.height;
-        UITableView * tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, barHeight, SCREEN_WIDTH, SCREEN_HEIGHT - barHeight) style:UITableViewStylePlain];
-        [tableView registerClass:[MainTableViewCell class] forCellReuseIdentifier:kMainCellIdentifier];
-        tableView.delegate = self;
-        tableView.dataSource = self;
-        tableView.rowHeight = 50.0f;
-        tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-        _table = tableView;
+        UITableView * table = [[UITableView alloc] initWithFrame:CGRectMake(0, barHeight, SCREEN_WIDTH, SCREEN_HEIGHT - barHeight) style:UITableViewStylePlain];
+        [table registerClass:[MainTableViewCell class] forCellReuseIdentifier:kMainCellIdentifier];
+        table.delegate = self;
+        table.dataSource = self;
+        table.rowHeight = 50.0f;
+        table.separatorStyle = UITableViewCellSeparatorStyleNone;
+        table.tableFooterView = [[UIView alloc] init];
+        _tableView = table;
     }
-    return _table;
+    return _tableView;
 }
 
 -(NSArray *)listArr{

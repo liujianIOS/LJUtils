@@ -15,6 +15,8 @@
 		1DD4720820BD3C2D00319D75 /* LJUtilsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD4720720BD3C2D00319D75 /* LJUtilsTests.m */; };
 		1DD4721320BD3C2D00319D75 /* LJUtilsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD4721220BD3C2D00319D75 /* LJUtilsUITests.m */; };
 		1DD4722720BD500500319D75 /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD4722620BD500500319D75 /* MainController.m */; };
+		1DE3DFC620E0998000115978 /* PlainTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE3DFC520E0998000115978 /* PlainTableController.m */; };
+		1DE3DFC920E0999800115978 /* GroupTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE3DFC820E0999800115978 /* GroupTableController.m */; };
 		1DE4445B20BD566A005D7BDE /* MainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE4445A20BD566A005D7BDE /* MainTableViewCell.m */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +57,10 @@
 		1DD4722420BD498400319D75 /* LJUtils-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LJUtils-Prefix.pch"; sourceTree = "<group>"; };
 		1DD4722520BD500500319D75 /* MainController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
 		1DD4722620BD500500319D75 /* MainController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainController.m; sourceTree = "<group>"; };
+		1DE3DFC420E0998000115978 /* PlainTableController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlainTableController.h; sourceTree = "<group>"; };
+		1DE3DFC520E0998000115978 /* PlainTableController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlainTableController.m; sourceTree = "<group>"; };
+		1DE3DFC720E0999800115978 /* GroupTableController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GroupTableController.h; sourceTree = "<group>"; };
+		1DE3DFC820E0999800115978 /* GroupTableController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroupTableController.m; sourceTree = "<group>"; };
 		1DE4445920BD566A005D7BDE /* MainTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTableViewCell.h; sourceTree = "<group>"; };
 		1DE4445A20BD566A005D7BDE /* MainTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,6 +117,7 @@
 				1DD471EF20BD3C2A00319D75 /* AppDelegate.m */,
 				1DD471F120BD3C2A00319D75 /* ViewController.h */,
 				1DD471F220BD3C2B00319D75 /* ViewController.m */,
+				1DE3DFBD20E0988E00115978 /* View Controller */,
 				1DD4722220BD43D700319D75 /* Tools */,
 				1DD4722020BD437D00319D75 /* Main */,
 				1DE4445620BD525C005D7BDE /* Support */,
@@ -152,6 +159,17 @@
 				1DD4722320BD43F900319D75 /* Contant.h */,
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		1DE3DFBD20E0988E00115978 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1DE3DFC420E0998000115978 /* PlainTableController.h */,
+				1DE3DFC520E0998000115978 /* PlainTableController.m */,
+				1DE3DFC720E0999800115978 /* GroupTableController.h */,
+				1DE3DFC820E0999800115978 /* GroupTableController.m */,
+			);
+			path = "View Controller";
 			sourceTree = "<group>";
 		};
 		1DE4445620BD525C005D7BDE /* Support */ = {
@@ -309,6 +327,8 @@
 				1DD471FE20BD3C2D00319D75 /* main.m in Sources */,
 				1DD471F020BD3C2A00319D75 /* AppDelegate.m in Sources */,
 				1DE4445B20BD566A005D7BDE /* MainTableViewCell.m in Sources */,
+				1DE3DFC920E0999800115978 /* GroupTableController.m in Sources */,
+				1DE3DFC620E0998000115978 /* PlainTableController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,6 +489,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8ZTCZR98J8;
 				GCC_PREFIX_HEADER = "LJUtils/LJUtils-Prefix.pch";
@@ -479,6 +500,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = xcode.LJUtils;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -487,6 +509,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8ZTCZR98J8;
 				GCC_PREFIX_HEADER = "LJUtils/LJUtils-Prefix.pch";
@@ -497,6 +520,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = xcode.LJUtils;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
